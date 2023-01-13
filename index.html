@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModeRn Button Hover Design</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8094a708b0.js" crossorigin="anonymous"></script>
+</head>
+<div>
+    <div class="container">
+        <div class="container-1">
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Button
+            </a>
+        </div>
+      <div class="container-2">
+        <button class="cart-button">
+            <span class="add-to-cart">Add to cart</span>
+            <!-- <span class="added">Added</span> -->
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fas fa-box"></i> 
+            </button>
+
+        <script>
+            const cartButtons= document.querySelectorAll('.cart-button');
+
+            cartButtons.forEach(button => {
+              button.addEventListener('click', cartClick);
+            });
+
+            function cartClick() {
+                let button = this;
+                button.classList.add('clicked');
+            }
+        </script>
+      </div>
+      <div class="container-3">
+        <div class="card">
+            <div class="imgbox">
+                <i class="fab fa-angular"></i>
+            </div>
+            <div class="content">
+                <h3 id="angular">ANGULAR</h3>
+                <p>Angular is a platform for building mobile
+                    and desktop web appllications
+                </p>
+                <a href="#">Readmore</a>
+            </div>
+        </div>
+   
+        <div class="card">
+            <div class="imgbox">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="content">
+                <h3 id="react">REACT</h3>
+                <p>It's never too to learn a new skill.
+                    Learnto code and join our 45+ million users
+                </p>
+                <a href="#">Readmore</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgbox">
+                <i class="fab fa-vuejs"></i>
+            </div>
+            <div class="content">
+                <h3 id="vuejs">Vue</h3>
+                <p>
+                    Vue is a progressive framework for building user interfaces
+                    Unlike other monolithic frameworks
+                </p>
+                <a href="#">Readmore</a>
+            </div>
+        </div>
+        
+        <div class="container-4">
+          <btn class="btn">
+            <div class="pattern">
+              <div class="target inner bg3"></div>
+            </div>
+            <div class="text">Just Slide</div>
+          </btn>
+<script>
+    const buttons = document.querySelectorAll('.btn');
+buttons.forEach((btn) => {
+let target = btn.querySelector('.target');
+function handleMove(e) {
+const x = -50 + (e.pageX - button.offsetLeft - 300 / 2) / 3;
+const y = -10 + (e.pageY - butotn.offsetTop - 100 / 2) / 3;
+
+target.style.setProperty('--x', `${ x }px`)
+target.style.setProperty('--y', `${ y }px`)
+}
+button.addEventListener('mousemove', (e) => {
+handleMove(e);
+});
+button.addEventListener('touchmove', (e) => {
+handleMove(e.changedTouches[0]);
+});
+});    
+    </script>
+        </div>
+            </div>
+        </body>
+        </html>
